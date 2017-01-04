@@ -51,9 +51,11 @@ private:
 	    // return *std::min_element(cands.begin(), cands.end());
             result = cands;
 	}
-        std::cout << "i = " << i << ", j = " << j << ":\t";
-        std::copy(result.begin(), result.end(), std::ostream_iterator<int>(std::cout, " "));
-        std::cout << std::endl;
+        if (i < j) {
+            std::cout << "i = " << i << ", j = " << j << ":\t";
+            std::copy(result.begin(), result.end(), std::ostream_iterator<int>(std::cout, " "));
+            std::cout << std::endl;
+        }
         return result;
     }
 
